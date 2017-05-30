@@ -47,7 +47,7 @@ workspace "SOIL2"
 			if not is_vs() then
 				buildoptions{ "-Wall" }
 			end
-			targetname "soil"
+			targetname "soil2"
 
 		configuration "Release"
 			defines { "NDEBUG" }
