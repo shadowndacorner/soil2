@@ -1,7 +1,5 @@
 bin/soil2*
-obj/*
-make/*
-lib/*
-projects/*
+bin/*
+build/*
 *.DS_Store*
 bin/SDL2.dll
