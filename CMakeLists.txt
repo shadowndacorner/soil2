@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
+set(SOIL2_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+project(soil2 VERSION 1.0 LANGUAGES CXX)
+set(SOIL2_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+file(
+	GLOB SOIL2_INCLUDES 
+	"${SOIL2_INCLUDE_DIR}/SOIL2/*.h"
+)
+
+set(
+    SOIL2_SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/soil2.cpp"
+)
+
+add_library(soil2_lib ${SOIL2_SOURCES} ${SOIL2_INCLUDES})
+
+include_directories(
+	soil2_lib
+	${SOIL2_INCLUDE_DIR}/SOIL2
+)
